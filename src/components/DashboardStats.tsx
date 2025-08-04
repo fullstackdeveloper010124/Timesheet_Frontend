@@ -58,6 +58,24 @@ export const DashboardStats: React.FC<DashboardStatsProps> = ({ timeEntries }) =
       color: 'bg-purple-500',
       bgColor: 'bg-purple-50 dark:bg-purple-500/10',
     },
+    {
+      title: 'Time Off Balance',
+      value: '12',
+      change: '5 days planned',
+      changeType: 'neutral',
+      icon: Calendar,
+      color: 'bg-purple-500',
+      bgColor: 'bg-purple-50 dark:bg-purple-500/10',
+    },
+    {
+      title: 'Time Off Balance',
+      value: '12',
+      change: '5 days planned',
+      changeType: 'neutral',
+      icon: Calendar,
+      color: 'bg-purple-500',
+      bgColor: 'bg-purple-50 dark:bg-purple-500/10',
+    },
   ];
 
   return (
