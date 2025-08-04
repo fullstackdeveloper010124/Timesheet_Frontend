@@ -65,11 +65,11 @@ const Team = () => {
     const fetchMembersAndProjects = async () => {
       try {
         // Fetch team members
-        const membersRes = await axios.get('http://localhost:5000/api/team/all');
+        const membersRes = await axios.get('https://timesheetsbackend.myadminbuddy.com/api/team/all');
         setTeamMembers(membersRes.data);
 
         // Fetch projects
-        const projectsRes = await axios.get('http://localhost:5000/api/projects/all');
+        const projectsRes = await axios.get('https://timesheetsbackend.myadminbuddy.com/api/projects/all');
         setProjects(projectsRes.data);
       } catch (err) {
         console.error('Fetch Error:', err);
@@ -83,7 +83,7 @@ const Team = () => {
     // Ensure project is an actual project ID, not a string like "Project Manager"
     if (newMember.name && newMember.project && newMember.email) {
       try {
-        const res = await axios.post('http://localhost:5000/api/team/add', {
+        const res = await axios.post('https://timesheetsbackend.myadminbuddy.com/api/team/add', {
           ...newMember,
           hoursThisWeek: 0,
           status: 'Active'
@@ -99,7 +99,7 @@ const Team = () => {
         // when fetching existing members, so we need to make sure the added member also has it.
         // We'll re-fetch all members for simplicity, or manually populate the project name here.
         // For now, let's re-fetch all for guaranteed consistency.
-        const updatedMembersRes = await axios.get('http://localhost:5000/api/team/all');
+        const updatedMembersRes = await axios.get('https://timesheetsbackend.myadminbuddy.com/api/team/all');
         setTeamMembers(updatedMembersRes.data);
 
 
@@ -180,9 +180,9 @@ const Team = () => {
 
     if (currentMember.name && currentMember.project && currentMember.email) {
       try {
-        const res = await axios.put(`http://localhost:5000/api/team/update/${currentMember._id}`, currentMember);
+        const res = await axios.put(`https://timesheetsbackend.myadminbuddy.com/api/team/update/${currentMember._id}`, currentMember);
         // After updating, re-fetch all members to ensure project name is correctly displayed
-        const updatedMembersRes = await axios.get('http://localhost:5000/api/team/all');
+        const updatedMembersRes = await axios.get('https://timesheetsbackend.myadminbuddy.com/api/team/all');
         setTeamMembers(updatedMembersRes.data);
         toast({ title: 'Updated', description: 'Member updated successfully' });
         setIsEditMemberOpen(false);
