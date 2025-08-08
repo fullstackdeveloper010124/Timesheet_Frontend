@@ -146,7 +146,7 @@ const Team = () => {
     if (!memberToDeleteId) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/team/delete/${memberToDeleteId}`);
+      await axios.delete(`https://timesheetsbackend.myadminbuddy.com/api/team/delete/${memberToDeleteId}`);
       setTeamMembers(prev => prev.filter(member => member._id !== memberToDeleteId));
       toast({ title: 'Deleted', description: 'Team member removed.' });
       setIsDeleteConfirmOpen(false);
