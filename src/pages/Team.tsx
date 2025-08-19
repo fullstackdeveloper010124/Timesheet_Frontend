@@ -414,7 +414,7 @@ const Team = () => {
                     <th className="px-6 py-3 text-left font-medium text-gray-500 dark:text-gray-400">Account Holder</th>
                     <th className="px-6 py-3 text-left font-medium text-gray-500 dark:text-gray-400">Account</th>
                     <th className="px-6 py-3 text-left font-medium text-gray-500 dark:text-gray-400">Account Type</th>
-                    <th className="px-6 py-3 text-left font-medium text-gray-500 dark:text-gray-400">Hours</th>
+                    <th className="px-6 py-3 text-left font-medium text-gray-500 dark:text-gray-400">Rate</th>
                     <th className="px-6 py-3 text-left font-medium text-gray-500 dark:text-gray-400">Status</th>
                     <th className="px-6 py-3 text-center font-medium text-gray-500 dark:text-gray-400">Actions</th>
                   </tr>
